@@ -116,7 +116,7 @@ const GameArea = ({
 
   const roomLink = `${window.location.origin}/room/${roomInfo.gameID}?c=${password}`;
 
-  const roomCode = `${roomInfo.gameID}-${password}`;
+  const roomCode = `${roomInfo.gameID}?c=${password}`;
 
   const [gameStage, setGameStage] = useState(roomInfo.gameState); // can be "LOOKING FOR MEMBERS" || "ON-GOING" || "COMPLETED"
 
@@ -807,7 +807,7 @@ const GameRoom = () => {
   const [isCopied, setIsCopied] = useState(false);
   const roomLink = `${window.location.origin}/room/${gameID}?c=${code}`;
 
-  const roomCode = `${gameID}-${code}`;
+  const roomCode = `${gameID}?c=${code}`;
 
   const [isRoomCreator, setIsRoomCreator] = useState(false);
 
